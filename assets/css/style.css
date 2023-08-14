@@ -43,13 +43,18 @@ body {
   --admin-card-shadow-hover: #5a9fe086;
   --bg-input: rgb(248 250 252/0.8);
   --sidebar-shadow: 2px 0 8px 0.06px rgba(0, 0, 0, 0.322);
+  --bg-from: linear-gradient(
+    -90deg,
+    rgb(71, 136, 226, 0.8),
+    rgb(0, 74, 177, 0.7)
+  );
 }
 
 body.dark-mode {
   background: #15192a;
   --bg-header: #1e263d;
   --text-color-white: #000000;
-  --text-color-black: #ffffff;
+  --text-color-black: rgb(190, 201, 218);
   --text-color-black-light: #ffffffb7;
   --bg-content-area: #15192a;
   --bg-white: #1e263d;
@@ -62,9 +67,21 @@ body.dark-mode {
   --bg-side-bar: linear-gradient(105deg, rgb(30 38 61), rgb(21 25 42));
   --bg-input: rgba(248, 250, 252, 0.08);
   --sidebar-shadow: 1px 0 8px 0.06px rgb(0, 0, 0);
+  --bg-from: #15192a;
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #fff;
 }
 
 /* global css */
+.text-blue {
+  color: var(--color-blur);
+}
 .text-color-black-light {
   color: var(--text-color-black-light);
 }
@@ -192,6 +209,7 @@ body.dark-mode {
   font-size: 1.8rem;
   padding: 0.8rem 1rem;
   background: var(--bg-input);
+  color: var(--text-color-black);
 }
 body.dark-mode .form-control {
   border-color: var(--border-color);
@@ -208,6 +226,7 @@ body.dark-mode .form-control::placeholder {
 }
 .form-control:focus {
   background: var(--bg-input);
+  color: var(--text-color-black);
 }
 .submit-btn {
   background: linear-gradient(45deg, var(--bg-blue), var(--bg-blue-light));
@@ -221,10 +240,11 @@ body.dark-mode .form-control::placeholder {
   border-radius: 0.5rem;
   box-shadow: 0 8px 9px -4px rgba(59, 113, 202, 0.3),
     0 4px 18px 0 rgba(59, 113, 202, 0.2);
+  transition: 0.3s;
 }
 .btn-blue:hover,
 .submit-btn:hover {
-  background: linear-gradient(90deg, var(--bg-blue), var(--bg-blue-light));
+  background: linear-gradient(-45deg, var(--bg-blue), var(--bg-blue-light));
 }
 .btn-blue:active,
 .submit-btn:active {
@@ -292,6 +312,7 @@ body.dark-mode .side-bar .nav-link.active {
 .submenu .nav-link {
   padding-left: 0.5rem;
 }
+
 /* admin card */
 .admin-card {
   background: var(--card-bg);
@@ -351,8 +372,9 @@ body.dark-mode .side-bar .nav-link.active {
 .admin-card-gradient:hover {
   box-shadow: 0 0 25px -5px var(--mycard-hover);
 }
+
 body.dark-mode .mycard:hover {
-  box-shadow: 0 0 17px 0px #0b0d16;
+  box-shadow: 0 0 17px 0px #000000;
 }
 .input-lavel {
   font-weight: 500;
@@ -376,12 +398,15 @@ div.dataTables_wrapper div.dataTables_info {
   float: left;
 }
 .dataTables_length select {
-  background: var(--bg-color);
+  background: var(--bg-input);
   color: var(--text-color-black);
   padding: 0.5rem 0.2rem;
   border: 1px solid var(--border-color);
   outline: 0;
   border-radius: 0.5rem;
+}
+body.dark-mode .dataTables_length select {
+  background: #2f374c;
 }
 #model-list_filter {
   color: var(--text-color-black);
@@ -432,6 +457,9 @@ tr {
   padding: 1.5rem 1rem !important;
 }
 /* navigation */
+.text-de-no {
+  text-decoration: none;
+}
 .navigation-menu {
   list-style: none;
   display: flex;
@@ -459,4 +487,24 @@ tr {
   color: var(--color-blur);
   border-color: var(--color-blur);
   background: transparent;
+}
+/* login page */
+.from-bg {
+  background: var(--bg-from);
+}
+.from-bg .mycard {
+  box-shadow: 0px 0px 15px 5px #00000094;
+}
+.from-bg .mycard:hover {
+  box-shadow: 0px 0px 20px 5px #000000 !important;
+}
+.captch_box {
+  user-select: none;
+  pointer-events: none;
+}
+.form-control:disabled {
+  background: var(--bg-content-area);
+}
+.mn-k-100vh {
+  min-height: 100vh;
 }
