@@ -53,4 +53,7 @@
     height: inherit;
     overflow-y: auto;
   }
+  .header-menu {
+    margin-right: 0rem;
+  }
 }

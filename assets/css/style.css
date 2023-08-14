@@ -5,6 +5,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+ol,
+ul {
+  padding-left: 0;
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -21,9 +25,9 @@ body {
   --bg-white: #fff;
   --bg-side-bar: #fff;
   --bg-header: linear-gradient(
-    90deg,
-    rgb(7, 198, 250, 0.8),
-    rgb(57, 124, 213, 0.7)
+    -90deg,
+    rgb(71, 136, 226, 0.8),
+    rgb(0, 74, 177, 0.7)
   );
   --bg-input-border: rgba(226, 240, 253, 0.568);
   --bg-content-area: #f1f6fc;
@@ -55,9 +59,9 @@ body.dark-mode {
   --card-bg: #1e263d;
   --admin-card-shadow: #344156;
   --admin-card-shadow-hover: #344156;
-  --bg-side-bar: linear-gradient(105deg, rgb(57 95 154), rgb(57 95 154));
+  --bg-side-bar: linear-gradient(105deg, rgb(30 38 61), rgb(21 25 42));
   --bg-input: rgba(248, 250, 252, 0.08);
-  --sidebar-shadow: 2px 0 8px 0.06px rgb(0, 0, 0);
+  --sidebar-shadow: 1px 0 8px 0.06px rgb(0, 0, 0);
 }
 
 /* global css */
@@ -84,9 +88,13 @@ body.dark-mode {
   position: sticky;
   top: 0;
   z-index: 99;
+  border-bottom: 1px solid var(--border-color);
 }
-/* main content section */
+.header-menu {
+  margin-right: 1rem;
+}
 
+/* main content section */
 .main-inner {
   grid-column: 1 / -1;
   background: var(--bg-content-area);
@@ -116,6 +124,7 @@ body.dark-mode {
   background: var(--bg-side-bar);
   box-shadow: var(--sidebar-shadow);
   min-height: 100vh;
+  border-right: 1px solid var(--border-color);
 }
 .side-bar::-webkit-scrollbar {
   width: 0;
@@ -252,6 +261,11 @@ body.dark-mode .form-control::placeholder {
 .submenu-link.active .nav-arrow {
   transform: rotate(90deg);
 }
+.submenu-link span {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 .nav-item i {
   margin-right: 1rem !important;
 }
@@ -261,6 +275,12 @@ body.dark-mode .form-control::placeholder {
 .side-bar .nav-link:hover {
   background: var(--bg-header);
   color: var(--text-alwyes-white);
+}
+body.dark-mode .side-bar .nav-link:hover {
+  background: #32406a;
+}
+body.dark-mode .side-bar .nav-link.active {
+  background: #32406a;
 }
 .side-bar .nav-link.active {
   background: var(--bg-header);
@@ -280,9 +300,10 @@ body.dark-mode .form-control::placeholder {
   min-height: 15rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 3px 5px var(--admin-card-shadow);
+  /* box-shadow: 0px 3px 5px var(--admin-card-shadow); */
   transition: 0.3s;
   color: var(--text-alwyes-white);
+  border: 1px solid var(--border-color);
 }
 .admin-card:hover {
   box-shadow: 0px 0px 10px 4px var(--admin-card-shadow-hover);
@@ -314,15 +335,17 @@ body.dark-mode .form-control::placeholder {
   transition: 0.3s;
   color: var(--text-alwyes-white);
   padding: 2rem;
+  border: 1px solid var(--border-color);
 }
 
 .mycard {
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   background-color: var(--bg-white);
   box-shadow: var(--mycard-shadow);
   transition: 0.3s;
   margin: 1rem;
+  overflow: hidden;
 }
 .mycard:hover,
 .admin-card-gradient:hover {
