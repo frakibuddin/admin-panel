@@ -1,7 +1,7 @@
 <div class="header py-2">
     <div class="header-inner container-fluid d-flex align-items-center justify-content-between">
         <div class="header-logo d-flex align-items-center gap-5">
-            <a href="index.html"><img src="assets/img/sim-unlocker-logo-dark-mode.png" alt="" width="200"></a>
+            <a href="index.php"><img src="assets/img/sim-unlocker-logo-dark-mode.png" alt="" width="200"></a>
             <div class="menu-btn cursor-pointer">
                 <i class="text-light fa-solid fa-bars"></i>
             </div>
@@ -31,11 +31,11 @@
                     <span>Rakib</span>
                 </a>
                 <ul class="dropdown-menu text-small shadow " aria-labelledby="dropdownUser2" data-popper-placement="top-start">
-                    <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                    <li><a class="dropdown-item" href="profile.php">Profile</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                    <li><a class="dropdown-item" href="login.php">Sign out</a></li>
                 </ul>
             </div>
         </div>

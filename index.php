@@ -3,6 +3,12 @@
 
 <body class="light-mode">
 
+    <!-- alert message -->
+    <!-- <div class="alert alert-danger alert-dismissible fade show my-alert" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div> -->
+
     <!-- admin panel -->
     <section>
         <div class="admin-wrapper">

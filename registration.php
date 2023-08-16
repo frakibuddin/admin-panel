@@ -14,10 +14,10 @@
                         <h1 class="text-color-black display-4 fw-bold mb-4">Registration</h1>
                         <hr class="border-color mb-4">
                         <form action="">
-                            <!-- error -->
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <!-- error meaasge -->
+                            <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>Email or Password wrong!
-                            </div>
+                            </div> -->
                             <div class="row mt-4">
                                 <div class="col-md-12">
                                     <div class="input-group mb-2">
