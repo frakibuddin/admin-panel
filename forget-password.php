@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>Login</title>
-</head>
+<!-- load header -->
+<?php include('inc/header.php') ?>
 
 <body class="light-mode">
     <section class="login-section vh-100 d-flex align-items-center justify-content-center from-bg">
@@ -25,8 +16,7 @@
                         <form action="">
                             <!-- error -->
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>Yor Email is wrong!
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>Yor Email is wrong!
                             </div>
 
                             <div class="row">
@@ -40,8 +30,7 @@
                                 <div class="col-md-12 mt-3 mb-4 mt-4">
                                     <button class="submit-btn w-100">Submit</button>
                                 </div>
-                                <p class="text-center text-color-black">Do you know password? <a
-                                        href="login.html">Login</a></p>
+                                <p class="text-center text-color-black">Do you know password? <a href="login.php">Login</a></p>
                             </div>
                         </form>
                     </div>
@@ -51,10 +40,4 @@
         </div>
     </section>
 
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
-
-</html>
+    <?php include('inc/footer.php') ?>

@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>Login</title>
-</head>
+<!-- load header -->
+<?php include('inc/header.php') ?>
 
 <body class="light-mode">
     <section class="login-section mn-k-100vh py-5 d-flex align-items-center justify-content-center from-bg">
@@ -25,8 +16,7 @@
                         <form action="" id="login-form">
                             <!-- error -->
                             <div class="alert alert-warning alert-dismissible fade hide message" role="alert">
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mt-3">
@@ -48,8 +38,7 @@
                                 <div class="col-md-12 mt-4">
                                     <div class="input-group mb-3">
 
-                                        <input type="text" disabled readonly class="form-control text-center captch_box"
-                                            value="">
+                                        <input type="text" disabled readonly class="form-control text-center captch_box" value="">
 
                                         <span class="input-group-text refresh_button cursor-pointer" id="basic-addon1">
                                             <i class="fa-solid fa-rotate-right"></i>
@@ -59,8 +48,7 @@
 
                                 <div class="col-md-12 mt-3">
                                     <div class="input-group mb-3">
-                                        <input type="text" required class="form-control captch_input"
-                                            placeholder="Enter captcha">
+                                        <input type="text" required class="form-control captch_input" placeholder="Enter captcha">
                                     </div>
                                 </div>
 
@@ -71,16 +59,14 @@
                                             <input type="checkbox" id="remember">
                                             <label for="remember" class="text-color-black">Remember me</label>
                                         </div>
-                                        <a href="forget-password.html"
-                                            class="text-color-black text-de-no fw-bold">Forgot Your Password?</a>
+                                        <a href="forget-password.html" class="text-color-black text-de-no fw-bold">Forgot Your Password?</a>
                                     </div>
                                 </div>
 
                                 <div class="col-md-12 mt-3 mb-4">
                                     <button type="submit" class="submit-btn w-100 login-btn">Login</button>
                                 </div>
-                                <p class="text-center text-color-black">Don't you have accout? <a
-                                        href="registration.html">Registration</a></p>
+                                <p class="text-center text-color-black">Don't you have accout? <a href="registration.html">Registration</a></p>
                             </div>
                         </form>
                     </div>
@@ -90,15 +76,4 @@
         </div>
     </section>
 
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script>
-
-
-
-    </script>
-</body>
-
-</html>
+    <?php include('inc/footer.php') ?>

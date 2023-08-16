@@ -1,134 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/dataTables-bootstrap5.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>Admin Panel</title>
-</head>
+<!-- load header -->
+<?php include('inc/header.php') ?>
 
 <body class="dark-modes" id="contento">
     <!-- admin panel -->
     <section>
         <div class="admin-wrapper">
-            <div class="header py-2">
-                <div class="header-inner container-fluid d-flex align-items-center justify-content-between">
-                    <div class="header-logo d-flex align-items-center gap-5">
-                        <a href="index.html"><img src="assets/img/sim-unlocker-logo-dark-mode.png" alt=""
-                                width="200"></a>
-                        <div class="menu-btn cursor-pointer">
-                            <i class="text-light fa-solid fa-bars"></i>
-                        </div>
 
-                        <a href="#!" class="text-light " onclick="javascript:toggleFullScreen()">
-                            <i class="fa-solid fa-expand "></i>
-                        </a>
-
-
-                    </div>
-                    <div class="header-dots d-none"><i class="fa-solid fa-ellipsis"></i></div>
-                    <div class="header-menu d-flex align-items-center gap-5">
-                        <div class="mode-btns ml-auto cursor-pointer">
-                            <i class="fa-regular fa-moon fs-2 text-light"></i>
-                        </div>
-                        <div>
-                            <div class="input-group ">
-                                <select class=" my-input dropdown-toggle" id="">
-                                    <option value="" class="text-dark">English</option>
-                                    <option value="" class="text-dark">Bangla</option>
-                                    <option value="" class="text-dark">Hindi</option>
-                                    <option value="" class="text-dark">Urdu</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="#"
-                                class="d-flex align-items-center link-light text-decoration-none dropdown-toggle show"
-                                id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="true">
-                                <img src="assets/img/img_avatar2.png" alt="" width="32" height="32"
-                                    class="rounded-circle me-2">
-                                <strong>Rakib</strong>
-                            </a>
-                            <ul class="dropdown-menu text-small shadow " aria-labelledby="dropdownUser2"
-                                data-popper-placement="top-start">
-                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="login.html">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- load topbar -->
+            <?php include('inc/topbar.php') ?>
 
             <div class="main-inner">
-                <!-- sidebar -->
-                <div class="side-bar">
-                    <p class="text-center mt-4 text-color-black"></p>
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link">
-                                <i class="fa-solid fa-gauge "></i>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#submenu1" data-bs-toggle="collapse"
-                                class="nav-link align-middle d-flex align-items-center justify-content-between submenu-link">
-                                <span class="">
-                                    <i class="fa-regular fa-flag"></i>
-                                    Brand</span>
-                                <i class="fa-solid fa-angle-down nav-arrow"></i>
-                            </a>
-                            <ul class="submenu collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="table.html" class="nav-link ">
-                                        All Brand</a>
-                                </li>
-                                <li class="w-100">
-                                    <a href="add-brand.html" class="nav-link">
-                                        Add Brand</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="invoice.html" class="nav-link">
-                                <i class="fa-solid fa-layer-group"></i>
-                                Category
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="invoice.html" class="nav-link">
-                                <i class="fa-solid fa-layer-group"></i>
-                                Product
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="details.html" class="nav-link">
-                                <i class="fa-solid fa-layer-group"></i>
-                                Details
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="invoice.html" class="nav-link">
-                                <i class="fa-solid fa-layer-group"></i>
-                                Invoice
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- load sidebar -->
+                <?php include('inc/sidebar.php') ?>
 
                 <!-- main content inner-->
                 <div class="content-area p-lg-5 p-md-3 p-sm-2">
                     <div class="row">
                         <div class="col">
                             <div class="mycard p-5">
-                                <h5 class="fs-1 text-color-black fw-bold">Navivation</h5>
+                                <h5 class="fs-1 text-color-black fw-bold">Navigation</h5>
                                 <p class="text-color-black-light">lorem ipsum dolor sit amet, consectetur
                                     adipisicing elit
                                 </p>
@@ -162,18 +52,15 @@
                                             <div class="col-md-12">
                                                 <label for="" class="input-lavel">Brand</label>
                                                 <div class="input-group mb-3">
-                                                    <span class="input-group-text" id="basic-addon1"><i
-                                                            class="fa-regular fa-bookmark"></i></span>
+                                                    <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-bookmark"></i></span>
                                                     <input type="text" class="form-control" placeholder="test brand">
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mt-2">
                                                 <label for="" class="input-lavel">Brand Slug</label>
                                                 <div class="input-group mb-3">
-                                                    <span class="input-group-text" id="basic-addon1"><i
-                                                            class="fa-regular fa-bookmark"></i></span>
-                                                    <input type="text" class="form-control"
-                                                        placeholder="test brandryslug">
+                                                    <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-bookmark"></i></span>
+                                                    <input type="text" class="form-control" placeholder="test brandryslug">
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mt-3">
@@ -265,11 +152,4 @@
 
 
 
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/dataTables.min.js"></script>
-    <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
-
-</html>
+    <?php include('inc/footer.php') ?>

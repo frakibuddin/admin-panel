@@ -1,162 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>Admin Panel</title>
-</head>
+<!-- load header -->
+<?php include('inc/header.php') ?>
 
 <body class="light-mode">
 
     <!-- admin panel -->
     <section>
         <div class="admin-wrapper">
-            <div class="header py-2">
-                <div class="header-inner container-fluid d-flex align-items-center justify-content-between">
-                    <div class="header-logo d-flex align-items-center gap-5">
-                        <a href="index.html"><img src="assets/img/sim-unlocker-logo-dark-mode.png" alt=""
-                                width="200"></a>
-                        <div class="menu-btn cursor-pointer">
-                            <i class="text-light fa-solid fa-bars"></i>
-                        </div>
 
-                        <a href="#!" class="text-light " onclick="javascript:toggleFullScreen()">
-                            <i class="fa-solid fa-expand "></i>
-                        </a>
+            <!-- load topbar -->
+            <?php include('inc/topbar.php') ?>
 
-
-                    </div>
-                    <div class="header-dots d-none"><i class="fa-solid fa-ellipsis"></i></div>
-                    <div class="header-menu d-flex align-items-center gap-5">
-                        <div class="mode-btns ml-auto cursor-pointer">
-                            <i class="fa-regular fa-moon fs-2 text-light"></i>
-                        </div>
-                        <div>
-                            <div class="input-group ">
-                                <select class=" my-input dropdown-toggle" id="">
-                                    <option value="" class="text-dark">English</option>
-                                    <option value="" class="text-dark">Bangla</option>
-                                    <option value="" class="text-dark">Hindi</option>
-                                    <option value="" class="text-dark">Urdu</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a href="#"
-                                class="d-flex align-items-center link-light text-decoration-none dropdown-toggle show"
-                                id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="true">
-                                <img src="assets/img/img_avatar2.png" alt="" width="32" height="32"
-                                    class="rounded-circle me-2">
-                                <span>Rakib</span>
-                            </a>
-                            <ul class="dropdown-menu text-small shadow " aria-labelledby="dropdownUser2"
-                                data-popper-placement="top-start">
-                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="login.html">Sign out</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="main-inner">
-                <!-- sidebar -->
-                <div class="side-bar">
-                    <p class="text-center mt-4 text-color-black"></p>
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link">
-                                <i class="fa-solid fa-gauge "></i>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#submenu1" data-bs-toggle="collapse"
-                                class="nav-link align-middle d-flex align-items-center justify-content-between submenu-link">
-                                <span class="">
-                                    <i class="fa-regular fa-flag"></i>
-                                    Brand</span>
-                                <i class="fa-solid fa-angle-down nav-arrow"></i>
-                            </a>
-                            <ul class="submenu collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="table.html" class="nav-link ">
-                                        All Brand</a>
-                                </li>
-                                <li class="w-100">
-                                    <a href="add-brand.html" class="nav-link">
-                                        Add Brand</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="details.html" class="nav-link">
-                                <i class="fa-solid fa-layer-group"></i>
-                                Category
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="details.html" class="nav-link">
-                                <i class="fa-brands fa-product-hunt"></i>
-                                Product
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="details.html" class="nav-link">
-                                <i class="fa-solid fa-circle-info"></i>
-                                Details
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="invoice.html" class="nav-link">
-                                <i class="fa-regular fa-file-lines"></i>
-                                Invoice
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#submenu2" data-bs-toggle="collapse"
-                                class="nav-link align-middle d-flex align-items-center justify-content-between submenu-link">
-                                <span class="">
-                                    <i class="fa-regular fa-flag"></i>
-                                    Pages</span>
-                                <i class="fa-solid fa-angle-down nav-arrow"></i>
-                            </a>
-                            <ul class="submenu collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                                <li class="w-100">
-                                    <a href="login.html" class="nav-link ">
-                                        Login Page</a>
-                                </li>
-                                <li class="w-100">
-                                    <a href="registration.html" class="nav-link ">
-                                        Registration</a>
-                                </li>
-                                <li class="w-100">
-                                    <a href="404.html" class="nav-link ">
-                                        404 Page</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="tickets.html" class="nav-link">
-                                <i class="fa-solid fa-ticket"></i>
-                                Tickets
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="users.html" class="nav-link">
-                                <i class="fa-solid fa-user-group"></i>
-                                Users
-                            </a>
-                        </li>
-                    </ul>
-                </div>
 
+                <!-- load sidebar -->
+                <?php include('inc/sidebar.php') ?>
 
                 <!-- main content inner-->
                 <div class="content-area p-lg-5 p-md-3 p-sm-2 mt-lg-0 mt-5">
@@ -165,24 +22,19 @@
                             <div class="admin-card">
                                 <div class="admin-card-top">
                                     <h3 class=" fw-bold fs-2 mb-3">Orders Received</h3>
-                                    <div
-                                        class="card-count flex-wrap d-flex align-items-center justify-content-between ">
+                                    <div class="card-count flex-wrap d-flex align-items-center justify-content-between ">
                                         <h2 class="">$234</h2>
                                         <i class="fa-solid fa-cart-shopping display-3 "></i>
                                     </div>
                                 </div>
 
                                 <div class="admin-card-bottom" overflow: hidden;">
-                                    <a href=""
-                                        class="text-decoration-none d-flex align-items-center justify-content-between px-5 position-absolute bottom-0 w-100">
+                                    <a href="" class="text-decoration-none d-flex align-items-center justify-content-between px-5 position-absolute bottom-0 w-100">
                                         <p>Completed Orders : </p>
                                         <p>312</p>
                                     </a>
-                                    <svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                                        style="height: 100%; width: 100%;">
-                                        <path
-                                            d="M-6.56,36.28 C149.99,150.00 340.93,-23.71 505.31,55.27 L500.00,150.00 L0.00,150.00 Z"
-                                            style="stroke: none; fill: rgba(82, 147, 238, 0.527);"></path>
+                                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                                        <path d="M-6.56,36.28 C149.99,150.00 340.93,-23.71 505.31,55.27 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(82, 147, 238, 0.527);"></path>
                                     </svg>
                                 </div>
                             </div>
@@ -191,8 +43,7 @@
                             <div class="admin-card">
                                 <div class="admin-card-top">
                                     <h3 class="fw-bold fs-2 mb-3">Totale Sale</h3>
-                                    <div
-                                        class="card-count flex-wrap d-flex align-items-center justify-content-between ">
+                                    <div class="card-count flex-wrap d-flex align-items-center justify-content-between ">
                                         <h2 class="">$8349</h2>
 
                                         <i class="fa-brands fa-connectdevelop display-3 "></i>
@@ -200,16 +51,12 @@
                                 </div>
 
                                 <div class="admin-card-bottom" overflow: hidden;">
-                                    <a href=""
-                                        class="text-decoration-none d-flex align-items-center justify-content-between px-5  position-absolute bottom-0 w-100">
+                                    <a href="" class="text-decoration-none d-flex align-items-center justify-content-between px-5  position-absolute bottom-0 w-100">
                                         <p>This Month : </p>
                                         <p>312</p>
                                     </a>
-                                    <svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                                        style="height: 100%; width: 100%;">
-                                        <path
-                                            d="M-6.56,36.28 C149.99,150.00 340.93,-23.71 505.31,55.27 L500.00,150.00 L0.00,150.00 Z"
-                                            style="stroke: none; fill: rgba(82, 147, 238, 0.527)"></path>
+                                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                                        <path d="M-6.56,36.28 C149.99,150.00 340.93,-23.71 505.31,55.27 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(82, 147, 238, 0.527)"></path>
                                     </svg>
                                 </div>
                             </div>
@@ -218,24 +65,19 @@
                             <div class="admin-card">
                                 <div class="admin-card-top">
                                     <h3 class="fw-bold fs-2 mb-3">Revenue</h3>
-                                    <div
-                                        class="card-count flex-wrap d-flex align-items-center justify-content-between ">
+                                    <div class="card-count flex-wrap d-flex align-items-center justify-content-between ">
                                         <h2 class="">$334</h2>
                                         <i class="fa-solid fa-money-check-dollar display-3"></i>
                                     </div>
                                 </div>
 
                                 <div class="admin-card-bottom" overflow: hidden;">
-                                    <a href=""
-                                        class="text-decoration-none d-flex align-items-center justify-content-between px-5 position-absolute bottom-0 w-100">
+                                    <a href="" class="text-decoration-none d-flex align-items-center justify-content-between px-5 position-absolute bottom-0 w-100">
                                         <p>This Month : </p>
                                         <p>312</p>
                                     </a>
-                                    <svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                                        style="height: 100%; width: 100%;">
-                                        <path
-                                            d="M-6.56,36.28 C149.99,150.00 340.93,-23.71 505.31,55.27 L500.00,150.00 L0.00,150.00 Z"
-                                            style="stroke: none; fill: rgba(82, 147, 238, 0.527);"></path>
+                                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                                        <path d="M-6.56,36.28 C149.99,150.00 340.93,-23.71 505.31,55.27 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgba(82, 147, 238, 0.527);"></path>
                                     </svg>
                                 </div>
                             </div>
@@ -288,18 +130,14 @@
                                 <ul class="nav nav-tabs row mb-3 text-center" id="ex1" role="tablist">
                                     <div class="col-md-3">
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link active d-flex align-items-center gap-3 justify-content-center"
-                                                id="ex1-tab-1" data-bs-toggle="tab" href="#ex1-tabs-1" role="tab"
-                                                aria-controls="ex1-tabs-1" aria-selected="true">
+                                            <a class="nav-link active d-flex align-items-center gap-3 justify-content-center" id="ex1-tab-1" data-bs-toggle="tab" href="#ex1-tabs-1" role="tab" aria-controls="ex1-tabs-1" aria-selected="true">
                                                 <i class="fa-solid fa-house "></i>
                                                 Home</a>
                                         </li>
                                     </div>
                                     <div class="col-md-3">
                                         <li class="nav-item " role="presentation">
-                                            <a class="nav-link d-flex align-items-center gap-3 justify-content-center"
-                                                id="ex1-tab-2" data-bs-toggle="tab" href="#ex1-tabs-2" role="tab"
-                                                aria-controls="ex1-tabs-2" aria-selected="false">
+                                            <a class="nav-link d-flex align-items-center gap-3 justify-content-center" id="ex1-tab-2" data-bs-toggle="tab" href="#ex1-tabs-2" role="tab" aria-controls="ex1-tabs-2" aria-selected="false">
                                                 <i class="fa-solid fa-key"></i>
                                                 Security
                                             </a>
@@ -307,9 +145,7 @@
                                     </div>
                                     <div class="col-md-3">
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link d-flex align-items-center gap-3 justify-content-center"
-                                                id="ex1-tab-3" data-bs-toggle="tab" href="#ex1-tabs-3" role="tab"
-                                                aria-controls="ex1-tabs-3" aria-selected="false">
+                                            <a class="nav-link d-flex align-items-center gap-3 justify-content-center" id="ex1-tab-3" data-bs-toggle="tab" href="#ex1-tabs-3" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">
                                                 <i class="fa-solid fa-location-crosshairs"></i>
                                                 Panding
                                             </a>
@@ -317,9 +153,7 @@
                                     </div>
                                     <div class="col-md-3">
                                         <li class="nav-item" role="presentation">
-                                            <a class="nav-link d-flex align-items-center gap-3 justify-content-center"
-                                                id="ex1-tab-4" data-bs-toggle="tab" href="#ex1-tabs-4" role="tab"
-                                                aria-controls="ex1-tabs-3" aria-selected="false">
+                                            <a class="nav-link d-flex align-items-center gap-3 justify-content-center" id="ex1-tab-4" data-bs-toggle="tab" href="#ex1-tabs-4" role="tab" aria-controls="ex1-tabs-3" aria-selected="false">
                                                 <i class="fa-solid fa-check"></i>
                                                 Completed
                                             </a>
@@ -327,8 +161,7 @@
                                     </div>
                                 </ul>
                                 <div class="tab-content px-5 mt-5" id="ex1-content">
-                                    <div class="tab-pane fade show active table-responsive" id="ex1-tabs-1"
-                                        role="tabpanel" aria-labelledby="ex1-tab-1">
+                                    <div class="tab-pane fade show active table-responsive" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
                                         <table class="table">
                                             <thead>
                                                 <tr>
@@ -364,8 +197,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel"
-                                        aria-labelledby="ex1-tab-2">
+                                    <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
                                         <table class="table ">
                                             <thead>
                                                 <tr>
@@ -401,8 +233,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel"
-                                        aria-labelledby="ex1-tab-3">
+                                    <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
                                         <table class="table ">
                                             <thead>
                                                 <tr>
@@ -438,8 +269,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="tab-pane fade" id="ex1-tabs-4" role="tabpanel"
-                                        aria-labelledby="ex1-tab-4">
+                                    <div class="tab-pane fade" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4">
                                         <table class="table ">
                                             <thead>
                                                 <tr>
@@ -480,16 +310,9 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-
-
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
-
-</html>
+    <?php include('inc/footer.php') ?>

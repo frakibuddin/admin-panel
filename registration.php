@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <title>Regintration</title>
-</head>
+<!-- load header -->
+<?php include('inc/header.php') ?>
 
 <body class="light-mode">
     <section class="registration-section mn-k-100vh py-5 d-flex align-items-center justify-content-center from-bg">
@@ -25,8 +16,7 @@
                         <form action="">
                             <!-- error -->
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>Email or Password wrong!
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>Email or Password wrong!
                             </div>
                             <div class="row mt-4">
                                 <div class="col-md-12">
@@ -119,8 +109,7 @@
                                 <div class="col-md-12 mt-3 mb-4">
                                     <button class="submit-btn w-100">Regintration</button>
                                 </div>
-                                <p class="text-center text-color-black">Do you have already accout? <a
-                                        href="login.html">Login</a>
+                                <p class="text-center text-color-black">Do you have already accout? <a href="login.html">Login</a>
                                 </p>
                             </div>
                         </form>
@@ -131,10 +120,4 @@
         </div>
     </section>
 
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
-
-</html>
+    <?php include('inc/footer.php') ?>

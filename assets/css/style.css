@@ -64,7 +64,7 @@ body.dark-mode {
   --card-bg: #1e263d;
   --admin-card-shadow: #344156;
   --admin-card-shadow-hover: #344156;
-  --bg-side-bar: linear-gradient(105deg, rgb(30 38 61), rgb(21 25 42));
+  --bg-side-bar: linear-gradient(-45deg, rgb(30 38 61), rgb(21 25 42));
   --bg-input: rgba(248, 250, 252, 0.08);
   --sidebar-shadow: 1px 0 8px 0.06px rgb(0, 0, 0);
   --bg-from: #15192a;
