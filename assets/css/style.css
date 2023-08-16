@@ -77,6 +77,9 @@ body.dark-mode h5,
 body.dark-mode h6 {
   color: #fff;
 }
+body.dark-mode .text-muted {
+  color: #ffffff60 !important;
+}
 
 /* global css */
 .text-blue {
@@ -602,4 +605,32 @@ tr {
   100% {
     top: 0.5rem;
   }
+}
+
+/* ticket view */
+.msg-box {
+  max-height: 50rem;
+  overflow-y: scroll;
+}
+.msg-box::-webkit-scrollbar {
+  width: 1rem;
+  background: var(--card-bg);
+}
+.msg-box::-webkit-scrollbar-thumb {
+  background: var(--bg-content-area);
+  border-radius: 1rem;
+}
+.msg-inner {
+  margin: 1.5rem 0;
+}
+.msg-inner .msg {
+  margin: 0 2rem;
+  padding: 2rem;
+  border-radius: 0 4rem 4rem 4rem;
+  background: var(--bg-content-area);
+  box-shadow: 3px 3px 6px 0px #00000038;
+  border: 1px solid var(--border-color);
+}
+body.dark-mode .msg-inner .msg {
+  box-shadow: 3px 3px 6px 0px #77777738;
 }
